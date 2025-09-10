@@ -7,17 +7,17 @@ Program sederhana untuk enkripsi, dekripsi, dan mencari kunci pada **Hill Cipher
 ## Fitur
 1. **Enkripsi** plaintext menjadi ciphertext dengan rumus:
    \[
-   C = K \times P \pmod{26}
+   C = Mk * MP mod 26
    \]
 
 2. **Dekripsi** ciphertext menjadi plaintext dengan rumus:
    \[
-   P = K^{-1} \times C \pmod{26}
+   P = Mk^(-1) * Mc mod 26
    \]
 
 3. **Cari kunci** dari pasangan plaintext–ciphertext dengan:
    \[
-   K = C \times P^{-1} \pmod{26}
+   K = Mc * Mp^(-1) mod 26
    \]
 
 ---
