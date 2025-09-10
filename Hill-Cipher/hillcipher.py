@@ -69,7 +69,7 @@ def encrypt(plaintext, key):
 def decrypt(ciphertext, key):
     key_inv = mat_inv2(key)
     if key_inv is None:
-        print("⚠️ Kunci tidak valid untuk dekripsi")
+        print("Kunci tidak valid untuk dekripsi")
         return None
 
     n = len(key)
@@ -87,7 +87,7 @@ def find_key(plaintext, ciphertext, n):
 
     # butuh minimal n*n huruf
     if len(pt_nums) < n*n or len(ct_nums) < n*n:
-        print("⚠️ Panjang plaintext/ciphertext kurang untuk cari kunci")
+        print("Panjang plaintext/ciphertext kurang untuk cari kunci")
         return None
 
     # ambil n blok pertama
@@ -96,7 +96,7 @@ def find_key(plaintext, ciphertext, n):
 
     P_inv = mat_inv2(P)
     if P_inv is None:
-        print("⚠️ Matriks plaintext tidak bisa diinvers")
+        print("Matriks plaintext tidak bisa diinvers")
         return None
 
     key = mat_mult(C, P_inv)
